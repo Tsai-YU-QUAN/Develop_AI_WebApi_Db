@@ -1,0 +1,59 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}花的分類系統{% endblock %}
+
+<head>
+  {% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% endblock %}
+</head>
+
+{% block content %}
+<div style="font-size:22px">
+  <form class="form-horizontal" method='post' action='/'>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="lb_sepal_length">萼片長度(cm):</label>
+      <div class="col-sm-6">
+        <input class="form-control" name="sepal_length">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="lb_sepal_width">萼片寬度(cm):</label>
+      <div class="col-sm-6">
+        <input class="form-control" name="sepal_width">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="lb_petal_length">花瓣長度(cm):</label>
+      <div class="col-sm-6">
+        <input class="form-control" name="petal_length">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3" for="lb_petal_width">花瓣寬度(cm):</label>
+      <div class="col-sm-6">
+        <input class="form-control" name="petal_width">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-6">
+        <button type='submit' class="btn btn-primary btn-lg" id="mySubmit">運算</button>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label class="control-label col-sm-3">{{pr_text}}</label>
+      <div class="col-sm-6">
+      </div>
+    </div>
+
+
+
+
+  </form>
+
+</div>
+{% endblock %}
